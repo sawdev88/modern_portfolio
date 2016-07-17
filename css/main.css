@@ -1,0 +1,327 @@
+*:focus {
+  outline: none;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Dosis', sans-serif;
+}
+
+body#index {
+  background: url(../img/san_down.jpg) no-repeat center center fixed;
+  background-color: #333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+body#portfolio {
+  background: url(../img/san_tall.jpg) no-repeat center center fixed;
+  background-color: #333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+body#contact {
+  background: url(../img/sanfran.jpg) no-repeat center center fixed;
+  background-color: #333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+.selected {
+  background: rgba(209, 71, 71, 0.7);
+  margin: 0;
+}
+
+.show_nav, .hide_nav {
+  position: fixed;
+  top: 40px;
+  right: 50px;
+}
+
+.show_nav span, .hide_nav span {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.show_nav span:hover, .hide_nav span:hover {
+  cursor: pointer;
+  color: #d14747;
+}
+
+.hide_nav {
+  display: none;
+}
+
+/*************************************** ROLL OUT NAV*/
+
+.top_bar {
+  position: fixed;
+  top: 0;
+  right: -3000px;
+  height: 100px;
+  width: 90%;
+  background: #000;
+  padding: 8px 32px;
+  overflow: hidden;
+}
+
+.thanks {
+  float: left;
+  color: #fff;
+  margin-left: 40px;
+}
+
+.thanks h2 {
+  font-size: 36px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.social i {
+  float: right;
+  color: #fff;
+  font-size: 40px;
+  margin: 24px;
+}
+
+/************************************* NAV BAR BOTTOM*/
+
+.nav_bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  height: 20px;
+  padding-right: 32px;
+}
+
+.nav_bottom p {
+  float: left;
+  padding-left: 32px;
+  color: rgba(255, 255, 255, 0.5);;
+}
+
+.nav_bottom ul {
+  text-align: right;
+  float: right;
+}
+
+.nav_bottom li {
+  text-decoration: none;
+  list-style: none;
+  display: inline;
+}
+
+.nav_bottom a {
+  color: #fff;
+  padding: 2px 6px;
+  margin-right: 16px;
+  text-transform: uppercase;
+}
+
+.nav_bottom a:hover {
+  color: #f5dada;
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+  top: 180px;
+  margin: 0 auto;
+  width: 300px;
+  background: rgba(9, 9, 9, 0.7);
+  border-radius: 10px;
+  text-align: center;
+  padding: 32px 0;
+  color: #fff;
+}
+
+.hero img {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  background: #ccc;
+  margin: auto;
+}
+
+.hero h1, .hero h2, .about_button {
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: 24px;
+  margin-top: 24px;
+}
+
+.hero h2 {
+  font-size: 16px;
+  margin: 24px 0 2px 0;
+}
+
+.about_button {
+  margin-top: 24px;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 48px;
+  background: #d14747;
+  color: #fff;
+}
+
+.about_button:hover {
+  transition: 0.3s ease-in-out;
+  background: #bc3f3f;
+}
+
+/*ABOUT PANEL*/
+
+.about {
+  position: relative;
+  margin: 0 auto;
+  top: -2000px;
+  background: #d14747;
+  color: #fff;
+  width: 60%;
+  padding: 48px 24px 24px;
+  border-radius: 10px;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.remove {
+  font-size: 32px;
+  margin-top: 24px;
+}
+
+.remove {
+  transition: all 0.8s ease-in-out 0s;
+}
+
+.remove:hover {
+  cursor: pointer;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+/********************************** SIDE NAV ARROWS */
+
+.port_page, .contact_page {
+  position: fixed;
+  top: 400px;
+  right: 32px;
+}
+
+.port_page a, .contact_page a {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 32px;
+}
+
+.port_display, .contact_display {
+  position: absolute;
+  right: 32px;
+  top: 440px;
+  display: none;
+}
+
+.port_display h2, .contact_display h2 {
+  color: rgba(209, 71, 71, 0.7);
+  font-size: 88px;
+}
+
+.about_page, .port_page_left {
+  position: fixed;
+  top: 400px;
+  left: 32px;
+}
+
+.about_page a, .port_page_left a {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 32px;
+}
+
+.about_display, .port_display_left {
+  position: absolute;
+  left: 32px;
+  top: 440px;
+  display: none;
+}
+
+.about_display h2, .port_display_left h2 {
+  color: rgba(209, 71, 71, 0.7);
+  font-size: 88px;
+}
+
+/************************************************************** PORTFOLIO PAGE*/
+
+.work h2 {
+  color: #fff;
+  font-size: 32px;
+  margin: 24px 0 0 32px;
+}
+
+/*************************************** @MEDIA */
+
+@media (max-width: 520px) {
+  .show_nav, .hide_nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .top_bar {
+    height: 60px;
+    padding-right: 8px;
+    width: 88%;
+  }
+  .thanks {
+    margin-left: 0;
+  }
+  .thanks h2 {
+    font-size: 24px;
+    margin-top: 2px;
+  }
+  .thanks p {
+    font-size: 8px;
+  }
+  .social i {
+    font-size: 24px;
+    margin: 4px;
+  }
+
+  .about {
+    width: 90%;
+  }
+
+  .nav_bottom p{
+    display: none;
+  }
+  .nav_bottom ul{
+    padding: 0;
+  }
+  .hero {
+    top: 100px;
+  }
+
+  .port_page, .contact_page {
+    right: 2px;
+  }
+  .about_page, .port_page_left {
+    left: 2px;
+  }
+}
