@@ -8,7 +8,7 @@ body {
   font-family: 'Dosis', sans-serif;
 }
 
-body#index {
+#index {
   background: url(../img/san_down.jpg) no-repeat center center fixed;
   background-color: #333;
   -webkit-background-size: cover;
@@ -18,18 +18,18 @@ body#index {
   overflow-x: hidden;
 }
 
-body#portfolio {
+#portfolio {
   background: url(../img/san_tall.jpg) no-repeat center center fixed;
   background-color: #333;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-body#contact {
-  background: url(../img/sanfran.jpg) no-repeat center center fixed;
+#contact {
+  background: url(../img/bg_townhome.jpg) no-repeat center center fixed;
   background-color: #333;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -38,14 +38,16 @@ body#contact {
   overflow: hidden;
 }
 
+#sent_mail {
+  background: #d14747;
+  color: #fff;
+}
+
 .container-fluid {
   padding: 0 !important;
 }
 
-.selected {
-  background: rgba(209, 71, 71, 0.7);
-  margin: 0;
-}
+/*************************************** ROLL OUT NAV*/
 
 .show_nav, .hide_nav {
   position: fixed;
@@ -55,7 +57,7 @@ body#contact {
 
 .show_nav span, .hide_nav span {
   font-size: 24px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(24, 24, 24, 0.3);
 }
 
 .show_nav span:hover, .hide_nav span:hover {
@@ -67,22 +69,21 @@ body#contact {
   display: none;
 }
 
-/*************************************** ROLL OUT NAV*/
-
 .top_bar {
   position: fixed;
   top: 0;
   right: -3000px;
   height: 100px;
   width: 90%;
-  background: #000;
+  background: url(../img/bg_top.png);
   padding: 8px 32px;
   overflow: hidden;
+  box-shadow: 2px 2px 4px #ccc;
 }
 
 .thanks {
   float: left;
-  color: #fff;
+  color: rgba(0, 0, 0, 0.5);
   margin-left: 40px;
 }
 
@@ -93,10 +94,15 @@ body#contact {
 }
 
 .social i {
+  opacity: .8;
   float: right;
-  color: #fff;
+  color: #7FC6DB;
   font-size: 40px;
   margin: 24px;
+}
+
+.social i:hover {
+  opacity: 1;
 }
 
 /************************************* NAV BAR BOTTOM*/
@@ -109,6 +115,13 @@ body#contact {
   background: rgba(255, 255, 255, 0.3);
   height: 20px;
   padding-right: 32px;
+  z-index: 1001;
+}
+
+.selected {
+  background: rgba(209, 71, 71, 0.7);
+  margin: 0;
+  color: #fff;
 }
 
 .nav_bottom p {
@@ -136,9 +149,56 @@ body#contact {
 }
 
 .nav_bottom a:hover {
-  color: #f5dada;
+  color: #7FC6DB;
   text-decoration: none;
 }
+
+.selected:hover {
+  color: #fff !important;
+}
+
+/********************************** SIDE NAV ARROWS */
+
+.port_page, .contact_page {
+  position: fixed;
+  top: 40%;
+  right: 32px;
+}
+
+.port_page a, .contact_page a, .about_page a, .port_page_left a {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 32px;
+}
+
+.port_display, .contact_display {
+  position: absolute;
+  right: 32px;
+  top: 45%;
+  display: none;
+  z-index: 1001;
+}
+
+.port_display h2, .contact_display h2, .about_display h2, .port_display_left h2 {
+  color: rgba(209, 71, 71, 0.7);
+  font-size: 88px;
+  z-index: 1000;
+}
+
+.about_page, .port_page_left {
+  position: fixed;
+  top: 40%;
+  left: 32px;
+}
+
+.about_display, .port_display_left {
+  position: absolute;
+  left: 32px;
+  top: 45%;
+  display: none;
+  z-index: 1001;
+}
+
+/***************************************************************** ABOUT PAGE */
 
 .hero {
   position: relative;
@@ -173,6 +233,11 @@ body#contact {
 .hero h2 {
   font-size: 16px;
   margin: 24px 0 2px 0;
+  word-wrap: break-word;
+}
+
+.moc span {
+  font-size: 64px;
 }
 
 .about_button {
@@ -202,14 +267,16 @@ body#contact {
   border-radius: 10px;
   text-align: center;
   overflow-y: scroll;
+  font-size: 18px;
+}
+
+.about p {
+  text-align: justify;
 }
 
 .remove {
   font-size: 32px;
   margin-top: 24px;
-}
-
-.remove {
   transition: all 0.8s ease-in-out 0s;
 }
 
@@ -219,61 +286,169 @@ body#contact {
   transform: rotate(360deg);
 }
 
-/********************************** SIDE NAV ARROWS */
-
-.port_page, .contact_page {
-  position: fixed;
-  top: 400px;
-  right: 32px;
-}
-
-.port_page a, .contact_page a {
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 32px;
-}
-
-.port_display, .contact_display {
-  position: absolute;
-  right: 32px;
-  top: 440px;
-  display: none;
-}
-
-.port_display h2, .contact_display h2 {
-  color: rgba(209, 71, 71, 0.7);
-  font-size: 88px;
-}
-
-.about_page, .port_page_left {
-  position: fixed;
-  top: 400px;
-  left: 32px;
-}
-
-.about_page a, .port_page_left a {
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 32px;
-}
-
-.about_display, .port_display_left {
-  position: absolute;
-  left: 32px;
-  top: 440px;
-  display: none;
-}
-
-.about_display h2, .port_display_left h2 {
-  color: rgba(209, 71, 71, 0.7);
-  font-size: 88px;
-}
-
 /************************************************************** PORTFOLIO PAGE*/
 
-.work h2 {
+.center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 72px auto 24px;
+  overflow: hidden;
+  padding: 16px;
+  text-align: center;
+  position: relative;
+}
+
+.wrapper img {
+  position: relative;
+  text-align: center;
+  z-index: -1;
+  padding-top: 8px;
+}
+
+.wrapper h2 {
+  text-align: left;
+  padding-bottom: 32px;
+}
+
+.work_heading {
   color: #fff;
   font-size: 32px;
   margin: 24px 0 0 32px;
 }
+
+.work {
+  width: 60%;
+  float: left;
+  padding-top: 24px;
+}
+
+aside {
+  float: right;
+  width: 30%;
+  text-align: left;
+  background:#fff;
+  border-radius: 10px;
+  padding: 24px;
+  margin-top: -24px;
+}
+
+aside li {
+  display: inline;
+  list-style: none;
+  font-size: 16px;
+  padding: 2px 6px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+aside li:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.aside_selected {
+  color: #d14747;
+}
+
+.aside_selected:hover {
+  color: #d14747;
+}
+
+.responsive_design {
+  background: url('../img/img_resp-design.png') 0 0 no-repeat;
+  background-size: contain;
+  min-width: 100%;
+  height: 565px;
+}
+
+.resp {
+  border-radius: 10px;
+  text-align: right;
+  width: 75%;
+  margin: 0 auto;
+  padding: 16px 0 32px 0;
+  overflow-x: hidden;
+}
+
+.resp h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.resp h3 {
+  display: inline;
+  color: rgba(209, 71, 71, 0.7);
+}
+
+.col-md-4 {
+  margin: 0 auto;
+}
+
+.row_2 {
+  padding-top: 32px;
+}
+
+.moc img {
+  max-height: 250px;
+  border-radius: 5px;
+  margin-left: 40px;
+}
+
+/**************************************************************** CONTACT PAGE*/
+
+.contact_info {
+  position: fixed;
+  bottom: 20px;
+  left: 88px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 400px;
+  padding: 64px 0;
+}
+
+.contact_info h3 {
+  color: #fff;
+  margin: 0;
+  padding-left: 40px;
+}
+
+.say_hello h3 {
+  display: inline-block;
+  font-size: 48px;
+  margin-top: 24px;
+}
+
+.say_hello input {
+  padding: 8px 24px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  width: 80%;
+  margin: 8px 40px;
+  font-size: 18px;
+}
+
+#submit {
+  border: none;
+  background: #d14747;
+  color: #fff;
+}
+
+#submit:hover {
+  transition: 0.3s ease-in-out;
+  background: #bc3f3f;
+}
+
+/*CONTACT PHP*/
+
+.thanks_php {
+  width: 400px;
+  margin: 88px auto;
+  text-align: center;
+}
+
 
 /*************************************** @MEDIA */
 
@@ -323,5 +498,43 @@ body#contact {
   }
   .about_page, .port_page_left {
     left: 2px;
+  }
+
+  /*PORTFILIO PAGE */
+  .wrapper {
+    width: 100%;
+  }
+  .work {
+    width: 100%;
+  }
+  aside {
+    float: none;
+    clear: both;
+    width: 100%;
+  }
+  .responsive_design {
+    margin-top: 50%;
+  }
+
+  /*CONTACT PAGE*/
+  .contact_info {
+    width: 350px;
+    left: 16px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .hero {
+    top: 100px;
+    width: 250px;
+  }
+
+  .hero img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about {
+    width: 80%;
   }
 }

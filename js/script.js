@@ -15,6 +15,10 @@ $about_button.on('click', function() {
       $hero.hide();
       $about.show().animate({top: 10}, 'slow');
     }
+    if ($(window).width() <= 1300) {
+      $hero.animate({top: 10});
+      $about.show().animate({top: 20}, 'slow');
+    }
 
 });
 
@@ -29,21 +33,31 @@ $remove_button.on('click', function() {
       $hero.fadeIn();
       $hero.animate({top: 100});
     }
+    if ($(window).width() <= 1300) {
+      $hero.animate({top: 100});
+      $about.animate({top: 1000}, 'slow').fadeOut();
+    }
 
 });
 
 // pag nav arrows
+// RIGHT
 $('.contact_page span, .port_page span').mouseover(function() {
+  $(this).fadeIn().css('color', '#fff');
   $('.port_display, .contact_display').fadeIn();
 })
 .mouseout(function() {
+  $(this).css('color', 'rgba(255, 255, 255, 0.75)');
   $('.port_display, .contact_display').fadeOut();
 });
 
+// LEFT
 $('.about_page span, .port_page_left span').mouseover(function() {
+  $(this).fadeIn().css('color', 'rgba(255, 255, 255, 0.75)');
   $('.about_display, .port_display_left').fadeIn();
 })
 .mouseout(function() {
+  $(this).css('color', 'rgba(255, 255, 255, 0.65)');
   $('.about_display, .port_display_left').fadeOut();
 });
 
