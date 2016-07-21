@@ -11,6 +11,7 @@
     <script src="https://use.fontawesome.com/09efc92c6d.js"></script>
   </head>
   <body id="portfolio">
+
     <div class="container-fluid">
 
       <div class="top_bar row">
@@ -19,9 +20,9 @@
           <p>Thanks for checking out my site</p>
         </div>
         <div class="social">
-        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-      </div>
+          <a href="https://twitter.com/seaner_sean" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+          <a href="https://github.com/sawdev88" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+        </div>
       </div>
 
       <div class="show_nav">
@@ -31,14 +32,14 @@
         <span class="glyphicon glyphicon-remove"></span>
       </div>
 
-      <div class="nav_bottom">
+      <nav class="nav_bottom">
         <p>· 2016 ·</p>
         <ul>
-          <li><a class="about_a" href="index.html">About</a></li>
-          <li><a class="selected port_a" href="#">Portfolio</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a class="selected" href="#">Portfolio</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-      </div>
+      </nav>
 
       <div class="about_page">
         <a href="index.html"><span class="glyphicon glyphicon-chevron-left"></span></a>
@@ -58,10 +59,10 @@
         <div class="work_heading">
           <h2>Some of my work</h2>
         </div>
-        <div class="work">
+        <section class="work">
           <div class="row">
             <div class="col-md-6">
-              <img class="img-responsive center" src="http://placehold.it/350x250">
+              <img class="img-responsive center" src="img/project-oh_last_night.jpeg" alt="Project - Oh! last night">
             </div>
             <div class="col-md-6">
               <img class="img-responsive center" src="http://placehold.it/350x250">
@@ -75,17 +76,42 @@
               <img class="img-responsive center" src="http://placehold.it/350x250">
             </div>
           </div>
-        </div>
-        <aside class="resp_bg">
-          <ul>
-            <li class="aside_selected">Responsive Design</li>
-            <li>· ·</li>
-            <li>Todo List</li>
-          </ul>
-          <div class="responsive_design"></div>
+        </section>
+
+        <aside class="side_bar">
+          <div class="display_responsive">
+            <p class="aside_selected">Responsive Design</p>
+            <p>· · · ·</p>
+            <p>From moc to beautiful on all devices</p>
+            <img class="img-responsive" src="img/img_resp-design.png" alt="Responsive Design">
+          </div>
+          <div class="display_toolbelt">
+            <p class="aside_selected">Toolbelt</p>
+            <p>· · · ·</p>
+            <p>Some of my favorites</p>
+            <img class="img-responsive" src="img/img_toolbelt.png" alt="Toolbelt" />
+          </div>
+          <div class="display_environment">
+            <p class="aside_selected">Environment</p>
+            <p>· · · ·</p>
+            <p>Tools of the trade</p>
+            <img class="img-responsive" src="img/img_environment.png" alt="Dev Tools">
+          </div>
         </aside>
       </div>
+
     </div>
   <script src="js/script.js" charset="utf-8"></script>
+  <script src="js/viewport.js" charset="utf-8"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-81003885-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
   </body>
 </html>

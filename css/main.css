@@ -2,7 +2,7 @@
   outline: none;
 }
 
-body {
+body, html {
   height: 100%;
   width: 100%;
   font-family: 'Dosis', sans-serif;
@@ -15,7 +15,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #portfolio {
@@ -47,12 +47,13 @@ body {
   padding: 0 !important;
 }
 
-/*************************************** ROLL OUT NAV*/
+/**************************************************************** ROLL OUT NAV*/
 
 .show_nav, .hide_nav {
   position: fixed;
   top: 40px;
   right: 50px;
+  z-index: 10001;
 }
 
 .show_nav span, .hide_nav span {
@@ -75,15 +76,15 @@ body {
   right: -3000px;
   height: 100px;
   width: 90%;
-  background: url(../img/bg_top.png);
+  background: url('../img/stardust.png');
   padding: 8px 32px;
   overflow: hidden;
-  box-shadow: 2px 2px 4px #ccc;
+  box-shadow: 2px 2px 4px #777;
 }
 
 .thanks {
   float: left;
-  color: rgba(0, 0, 0, 0.5);
+  color: #fff;
   margin-left: 40px;
 }
 
@@ -96,16 +97,16 @@ body {
 .social i {
   opacity: .8;
   float: right;
-  color: #7FC6DB;
+  color: #fff;
   font-size: 40px;
   margin: 24px;
 }
 
 .social i:hover {
-  opacity: 1;
+  color: #7FC6DB;
 }
 
-/************************************* NAV BAR BOTTOM*/
+/************************************************************** NAV BAR BOTTOM*/
 
 .nav_bottom {
   position: fixed;
@@ -157,7 +158,7 @@ body {
   color: #fff !important;
 }
 
-/********************************** SIDE NAV ARROWS */
+/************************************************************ SIDE NAV ARROWS */
 
 .port_page, .contact_page {
   position: fixed;
@@ -202,9 +203,7 @@ body {
 
 .hero {
   position: relative;
-  top: 180px;
   margin: 0 auto;
-  width: 300px;
   background: rgba(9, 9, 9, 0.7);
   border-radius: 10px;
   text-align: center;
@@ -271,7 +270,7 @@ body {
 }
 
 .about p {
-  text-align: justify;
+  text-align: center;
 }
 
 .remove {
@@ -298,7 +297,7 @@ body {
   width: 80%;
   margin: 72px auto 24px;
   overflow: hidden;
-  padding: 16px;
+  padding: 8px 16px 16px;
   text-align: center;
   position: relative;
 }
@@ -312,7 +311,7 @@ body {
 
 .wrapper h2 {
   text-align: left;
-  padding-bottom: 32px;
+  padding-bottom: 0;
 }
 
 .work_heading {
@@ -327,61 +326,32 @@ body {
   padding-top: 24px;
 }
 
+.work img {
+  width: 350px;
+  height: auto;
+}
+
 aside {
   float: right;
   width: 30%;
+  height: 560px;
   text-align: left;
-  background:#fff;
+  position: relative;
+  background: #fff;
   border-radius: 10px;
   padding: 24px;
-  margin-top: -24px;
-}
-
-aside li {
-  display: inline;
-  list-style: none;
-  font-size: 16px;
-  padding: 2px 6px;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-aside li:hover {
-  cursor: pointer;
-  color: #000;
+  margin-top: -2.5%;
+  z-index: -1;
+  text-align: center;
 }
 
 .aside_selected {
   color: #d14747;
+  font-size: 24px;
 }
 
 .aside_selected:hover {
   color: #d14747;
-}
-
-.responsive_design {
-  background: url('../img/img_resp-design.png') 0 0 no-repeat;
-  background-size: contain;
-  min-width: 100%;
-  height: 565px;
-}
-
-.resp {
-  border-radius: 10px;
-  text-align: right;
-  width: 75%;
-  margin: 0 auto;
-  padding: 16px 0 32px 0;
-  overflow-x: hidden;
-}
-
-.resp h2 {
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.resp h3 {
-  display: inline;
-  color: rgba(209, 71, 71, 0.7);
 }
 
 .col-md-4 {
@@ -396,6 +366,10 @@ aside li:hover {
   max-height: 250px;
   border-radius: 5px;
   margin-left: 40px;
+}
+
+.display_toolbelt, .display_environment {
+  display: none;
 }
 
 /**************************************************************** CONTACT PAGE*/
@@ -413,6 +387,10 @@ aside li:hover {
   color: #fff;
   margin: 0;
   padding-left: 40px;
+}
+
+.say_hello {
+  margin: 0 auto;
 }
 
 .say_hello h3 {
@@ -441,16 +419,61 @@ aside li:hover {
   background: #bc3f3f;
 }
 
-/*CONTACT PHP*/
+/***************************************************************** CONTACT PHP*/
 
 .thanks_php {
-  width: 400px;
+  width: 300px;
   margin: 88px auto;
   text-align: center;
 }
 
+/********************************************************************* @MEDIA */
 
-/*************************************** @MEDIA */
+@media (min-width: 1401px) {
+  .hero img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero {
+    width: 300px;
+    top: 180px;
+  }
+
+  aside {
+    height: 710px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .hero {
+    top: 100px;
+    width: 250px;
+  }
+
+  .hero img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about {
+    width: 80%;
+  }
+}
+
+@media (max-width: 990px) {
+  aside {
+    float: none;
+    clear: both;
+    width: 100%;
+    height: 620px;
+  }
+
+  .work {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+}
 
 @media (max-width: 520px) {
   .show_nav, .hide_nav {
@@ -464,16 +487,20 @@ aside li:hover {
     padding-right: 8px;
     width: 88%;
   }
+
   .thanks {
     margin-left: 0;
   }
+
   .thanks h2 {
     font-size: 24px;
     margin-top: 2px;
   }
+
   .thanks p {
     font-size: 8px;
   }
+
   .social i {
     font-size: 24px;
     margin: 4px;
@@ -481,51 +508,19 @@ aside li:hover {
 
   .about {
     width: 90%;
+    margin-bottom: 32px;
   }
 
   .nav_bottom p{
     display: none;
   }
+
   .nav_bottom ul{
     padding: 0;
   }
+
   .hero {
-    top: 100px;
-  }
-
-  .port_page, .contact_page {
-    right: 2px;
-  }
-  .about_page, .port_page_left {
-    left: 2px;
-  }
-
-  /*PORTFILIO PAGE */
-  .wrapper {
-    width: 100%;
-  }
-  .work {
-    width: 100%;
-  }
-  aside {
-    float: none;
-    clear: both;
-    width: 100%;
-  }
-  .responsive_design {
-    margin-top: 50%;
-  }
-
-  /*CONTACT PAGE*/
-  .contact_info {
-    width: 350px;
-    left: 16px;
-  }
-}
-
-@media (max-width: 1300px) {
-  .hero {
-    top: 100px;
+    top: 60px;
     width: 250px;
   }
 
@@ -534,7 +529,19 @@ aside li:hover {
     height: 150px;
   }
 
-  .about {
-    width: 80%;
+  .port_page, .contact_page, .about_page, .port_page_left {
+    display: none;
+  }
+
+  /*PORTFILIO PAGE */
+  .wrapper {
+    width: 100%;
+  }
+
+  /*CONTACT PAGE*/
+
+  .contact_info {
+    width: 320px;
+    left: 8px;
   }
 }
