@@ -53,7 +53,7 @@ body, html {
   position: fixed;
   top: 40px;
   right: 50px;
-  z-index: 10001;
+  z-index: 1001;
 }
 
 .show_nav span, .hide_nav span {
@@ -80,6 +80,7 @@ body, html {
   padding: 8px 32px;
   overflow: hidden;
   box-shadow: 2px 2px 4px #777;
+  z-index: 1001;
 }
 
 .thanks {
@@ -322,13 +323,57 @@ body, html {
 
 .work {
   width: 60%;
+  height: 680px;
+  overflow-y: scroll;
   float: left;
   padding-top: 24px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.work_bg {
+  background: rgba(255, 255, 255, 0.8);
+
+}
+
+.work hr {
+  width: 80%;
+  margin: 32px auto;
 }
 
 .work img {
-  width: 350px;
+  padding-top: 0;
+  width: 400px;
   height: auto;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.work h2 {
+  text-align: center;
+  font-size: 68px;
+  text-decoration: underline;
+}
+
+.work p, .work h2 {
+  position: relative;;
+  z-index: -1;
+}
+
+.coming_soon {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+
+.down_arrow {
+  position: absolute;
+  top: 600px;
+  color: rgba(209, 71, 71, 0.5);
+  font-size: 48px;
+  z-index: 1;
+  display: none;
 }
 
 aside {
@@ -343,6 +388,11 @@ aside {
   margin-top: -2.5%;
   z-index: -1;
   text-align: center;
+  overflow: hidden;
+}
+
+aside img {
+  margin: auto;
 }
 
 .aside_selected {
@@ -439,10 +489,6 @@ aside {
     width: 300px;
     top: 180px;
   }
-
-  aside {
-    height: 710px;
-  }
 }
 
 @media (max-width: 1400px) {
@@ -454,6 +500,10 @@ aside {
   .hero img {
     width: 150px;
     height: 150px;
+  }
+
+  .work {
+    height: 520px;
   }
 
   .about {
@@ -543,5 +593,18 @@ aside {
   .contact_info {
     width: 320px;
     left: 8px;
+  }
+
+                    /*TEMP*/
+
+  .coming_soon {
+    top: 10%;
+    left: 30%;
+  }
+}
+
+@media (min-height: 800px) {
+  aside {
+    height: 720px;
   }
 }

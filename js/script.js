@@ -1,9 +1,10 @@
-$about_button = $('.about_button');
-$remove_button = $('.remove');
-$hero = $('.hero');
-$about = $('.about');
-$about_p = $('.hero p');
-$index_body = $('#index');
+var
+  $about_button = $('.about_button'),
+  $remove_button = $('.remove'),
+  $hero = $('.hero'),
+  $about = $('.about'),
+  $about_p = $('.hero p'),
+  $index_body = $('#index');
 
 // Show about div. Hide about button on hero section
 $about_button.on('click', function() {
@@ -76,15 +77,16 @@ $('.hide_nav').on('click', function() {
   $('.top_bar').animate({left: 3000});
 })
 
-
+// Flash down arrow on portfolio page
+$('.down_arrow').fadeIn('slow').animate({top: 700}).fadeOut('slow');
 
 function loopDivs() {
 
-  $('.display_responsive').fadeIn().delay(5000).fadeOut();
+  $('.display_responsive').fadeIn().delay(10000).fadeOut();
 
-  $('.display_toolbelt').delay(5800).fadeIn().delay(5000).fadeOut();
+  $('.display_toolbelt').delay(10500).fadeIn('slow').delay(10000).fadeOut('slow', loopDivs);
 
-  $('.display_environment').delay(12000).fadeIn().delay(5000).fadeOut(loopDivs);
+  //$('.display_environment').delay(11500).fadeIn('slow').delay(5000).fadeOut(loopDivs);
 
 }
 
