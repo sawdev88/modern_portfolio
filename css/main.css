@@ -221,6 +221,15 @@ body, html {
   margin: auto;
 }
 
+.hero img:hover {
+  -webkit-transform: scale(1.05) rotate(-5deg);
+  -moz-transform: scale(1.05) rotate(-5deg);
+  -ms-transform: scale(1.05) rotate(-5deg);
+  -o-transform: scale(1.05) rotate(-5deg);
+  transform: scale(1.05) rotate(-5deg);
+  cursor: help;
+}
+
 .hero h1, .hero h2, .about_button {
   text-transform: uppercase;
 }
@@ -259,7 +268,7 @@ body, html {
 .about {
   position: relative;
   margin: 0 auto;
-  top: -2000px;
+  bottom: -800px;
   background: #d14747;
   color: #fff;
   width: 60%;
@@ -332,11 +341,6 @@ body, html {
   border-radius: 10px;
 }
 
-.work_bg {
-  background: rgba(255, 255, 255, 0.8);
-
-}
-
 .work hr {
   width: 80%;
   margin: 32px auto;
@@ -344,27 +348,55 @@ body, html {
 
 .work img {
   padding-top: 0;
+  margin-top: 24px;
   width: 400px;
   height: auto;
-  z-index: -1;
+  z-index: 1;
   border-radius: 10px;
 }
 
-.work h2 {
+.work h2, .work h3 {
   text-align: center;
-  font-size: 68px;
   text-decoration: underline;
 }
 
-.work p, .work h2 {
-  position: relative;;
-  z-index: -1;
+.work h2 {
+  font-size: 68px;
 }
 
-.coming_soon {
-  position: absolute;
-  top: 30%;
-  left: 25%;
+.work p, .work h2 {
+  position: relative;
+  z-index: 1;
+}
+
+.work i {
+  font-size: 3em;
+  color: rgba(0, 0, 0, 0.4);
+  display: none;
+  line-height: 100px;
+}
+
+.work i:hover {
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.mini-projects {
+  margin: 60px 0 32px;
+}
+
+.mini-projects span {
+  font-size: 1.6em;
+}
+
+.mini-projects a {
+  font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.mini-projects a:hover {
+  color: rgba(209, 71, 71, 0.9);
+  text-decoration: none;
 }
 
 .down_arrow {
@@ -372,7 +404,7 @@ body, html {
   top: 600px;
   color: rgba(209, 71, 71, 0.5);
   font-size: 48px;
-  z-index: 1;
+  z-index: 1001;
   display: none;
 }
 
@@ -506,6 +538,15 @@ aside img {
     height: 520px;
   }
 
+  .work i {
+    font-size: 2em;
+    line-height: 20px;
+  }
+
+  .down_arrow {
+    top: 450px;
+  }
+
   .about {
     width: 80%;
   }
@@ -522,6 +563,18 @@ aside img {
   .work {
     width: 100%;
     margin-bottom: 80px;
+  }
+
+  .work i {
+    display: block;
+  }
+
+  .mini-projects {
+    margin-bottom: 0;
+  }
+
+  .mini-project {
+    margin-bottom: 48px;
   }
 }
 
@@ -588,14 +641,16 @@ aside img {
     width: 100%;
   }
 
+  .work p {
+    font-size: 1.2em;
+  }
+
   /*CONTACT PAGE*/
 
   .contact_info {
     width: 320px;
     left: 8px;
   }
-
-                    /*TEMP*/
 
   .coming_soon {
     top: 10%;
