@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Lato|Lobster);
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+*:focus {
+    outline: none;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background: #f27461;
+    color: #333;
+}
+header {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Lobster', sans-serif;
+    color: #fff;
+}
+header h1 {
+    font-size: 80px;
+}
+.list-container {
+    width: 400px;
+    margin: 40px auto;
+}
+form {
+    overflow: hidden;
+    margin-bottom: 8px;
+    height: 37px;
+}
+form input {
+    float: left;
+    display: inline;
+    width: 90%;
+    font-size: 18px;
+    padding: 8px;
+    border: none;
+}
+form button {
+    display: inline;
+    width: 40px;
+    height: 37px;
+    border-radius: none;
+    border: none;
+    background: #54e1e6;
+    color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+form button span {
+    margin-top: 2px;
+    font-size: 20px;
+}
+form button:hover {
+    cursor: pointer;
+}
+ul {
+    clear: both;
+    list-style: none;
+    width: 100%;
+}
+li {
+    overflow-x: scroll;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+}
+li:last-of-type {
+    border-bottom: none;
+}
+li:hover {
+    cursor: pointer;
+}
+.completed {
+    text-decoration: line-through;
+    color: rgba(200, 200, 200, 0.8);
+}
+.validater {
+    display: none;
+    position: absolute;
+    top: 188px;
+    height: 60px;
+    width: 500px;
+    text-align: center;
+    color: #fff;
+    background: #54e1e6;
+    padding-top: 8px;
+    font-size: 32px;
+    margin-left: 35%;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
+
+  form {
+    width: 100%;
+    margin: 32px auto;
+  }
+
+  form input {
+    width: 80%;
+  }
+
+  ul {
+    width: 90%;
+  }
+}
