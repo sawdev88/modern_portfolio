@@ -16,7 +16,7 @@ for (var i = 0; i < buttons.length; i++) {
       var answer = eval(equals);
 
       // Display answer
-      display.innerHTML = eval(answer);
+      display.innerHTML = answer;
 
       // Clear array to prevent OOO and store answer as first param
       clearArray(values);

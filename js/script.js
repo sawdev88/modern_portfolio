@@ -6,15 +6,17 @@ let $about_button = $('.about_button'),
     $index_body = $('#index'),
     $hideNav = $('.hide_nav'),
     $showNav = $('.show_nav'),
-    $topBar = $('.top_bar'),
-    distance;
+    $topBar = $('.top_bar');
 
-  var loopDivs = function() {
+function loopDivImgs() {
     $('.display_responsive').fadeIn().delay(10000).fadeOut();
-    $('.display_toolbelt').delay(10500).fadeIn('slow').delay(10000).fadeOut('slow', loopDivs);
-  }();
+    $('.display_toolbelt').delay(10500).fadeIn('slow').delay(10000).fadeOut('slow', loopDivImgs);
+  };
 
 $(function() {
+
+  // Recursion
+  loopDivImgs();
 
   // Show about div. Hide about button on hero section
   $about_button.on('click', function() {
@@ -111,16 +113,23 @@ $(function() {
       $('.about_display, .port_display_left').fadeOut();
     });
 
-    // Quick flash down arrow on potfolio page
-    if ($(window).width() > 1400) {
-      distance = 700;
-    } else {
-      distance = 550;
+    //Set animation destination for flash arrow
+    var distance = function () {
+      var distanceDown;
+
+      if ($(window).width() > 1400) {
+        return distanceDown = 700;
+      } else {
+        return distanceDown = 550;
+      }
     }
+
+    // Flash arrow on portfolio page
     $('.down_arrow').fadeIn('slow').animate({
-      top: distance
+      top: distance()
     }).fadeOut('slow');
 
+    // Have github icons fadeIn on hover of .work
     $('.work').hover(function() {
       $('.work i').fadeIn();
     })
