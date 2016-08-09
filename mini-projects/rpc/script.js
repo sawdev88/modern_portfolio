@@ -1,21 +1,18 @@
-var compPickArr = ['Rock', 'Paper', 'Scissors'],
-    userPick,
-    compPick,
-    winnerStr,
+var $winnerText = $('.winner-text'),
+    $compText = $('.comp-text'),
     userScore = 0,
     compScore = 0,
-    areYouAWinner,
-    $userScoreText = $('.user-score-text'),
-    $compScoreText = $('.comp-score-text'),
-    $winnerText = $('.winner-text'),
-    $compText = $('.comp-text'),
-    $playAgainBtn = $('.play-again');
+    winnerStr,
+    areYouAWinner;
 
 function compChoice(item) {
+    compPickArr = ['Rock', 'Paper', 'Scissors']
     compPick = compPickArr[Math.floor(Math.random() * compPickArr.length)];
 }
 
 function winner(userPick, compPick) {
+  var userPick,
+      compPick;
 
     if (userPick === compPick) {
         winnerStr = 'Tie';
@@ -33,7 +30,6 @@ function winner(userPick, compPick) {
         winnerStr = "loser";
         areYouAWinner = false;
     }
-
 }
 
 function makePick() {
@@ -47,7 +43,7 @@ function makePick() {
 
         if ($compText.text().length > 0) {
             $('.play').attr('disabled', 'disabled');
-            $playAgainBtn.fadeIn();
+            $('.play-again').fadeIn();
             compChoice();
         }
     })
@@ -57,11 +53,13 @@ $(function() {
 
     makePick();
 
-    $playAgainBtn.on('click', function() {
+    $('.play-again').on('click', function() {
+      var $userScoreText = $('.user-score-text'),
+          $compScoreText = $('.comp-score-text');
+
         $('.play').removeAttr('disabled');
         $compText.text('');
         $(this).hide();
-
         if (areYouAWinner) {
             ++userScore;
             $winnerText.text('Nice Win. Keep it going.');
@@ -73,7 +71,6 @@ $(function() {
         } else {
             $winnerText.text('Ties are okay. Get \'em this time');
         }
-
         makePick();
     })
 
