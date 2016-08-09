@@ -1,19 +1,20 @@
-var
-  $about_button = $('.about_button'),
-  $remove_button = $('.remove'),
-  $hero = $('.hero'),
-  $about = $('.about'),
-  $about_p = $('.hero p'),
-  $index_body = $('#index');
+let $about_button = $('.about_button'),
+    $remove_button = $('.remove'),
+    $hero = $('.hero'),
+    $about = $('.about'),
+    $about_p = $('.hero p'),
+    $index_body = $('#index'),
+    $hideNav = $('.hide_nav'),
+    $showNav = $('.show_nav'),
+    $topBar = $('.top_bar'),
+    distance;
 
-function loopDivs() {
-  $('.display_responsive').fadeIn().delay(10000).fadeOut();
-  $('.display_toolbelt').delay(10500).fadeIn('slow').delay(10000).fadeOut('slow', loopDivs);
-}
+  var loopDivs = function() {
+    $('.display_responsive').fadeIn().delay(10000).fadeOut();
+    $('.display_toolbelt').delay(10500).fadeIn('slow').delay(10000).fadeOut('slow', loopDivs);
+  }();
 
 $(function() {
-
-  loopDivs();
 
   // Show about div. Hide about button on hero section
   $about_button.on('click', function() {
@@ -43,11 +44,17 @@ $(function() {
     }
   });
 
-  // Hide about div. Show hero button 
+  // Hide about div. Show hero button
   $remove_button.on('click', function() {
     $about_button.fadeIn();
     $about_p.css('margin-bottom', '10px');
 
+    //Hide the hero modal
+    $about.animate({
+      top: 1000
+    }, 'slow').fadeOut();
+
+    // Set About panel back into place after hiding hero modal
     if ($(window).width() <= 520) {
       $hero.fadeIn();
       $hero.animate({
@@ -58,31 +65,27 @@ $(function() {
       $hero.animate({
         top: 180
       });
-      $about.hide();
     } else {
       $hero.animate({
         top: 100
       });
-      $about.animate({
-        top: 1000
-      }, 'slow').fadeOut();
     }
   });
 
   // Top bar toggle show
-  $('.show_nav').on('click', function() {
+  $showNav.on('click', function() {
     $(this).fadeOut('fast');
-    $('.hide_nav').fadeIn();
-    $('.top_bar').animate({
+    $hideNav.fadeIn();
+    $topBar.animate({
       left: 0
     });
   })
 
   // Top bar toggle hide
-  $('.hide_nav').on('click', function() {
+  $hideNav.on('click', function() {
     $(this).fadeOut();
-    $('.show_nav').fadeIn();
-    $('.top_bar').animate({
+    $showNav.fadeIn();
+    $topBar.animate({
       left: 3000
     });
   })
@@ -108,18 +111,18 @@ $(function() {
       $('.about_display, .port_display_left').fadeOut();
     });
 
-  var distance;
-  if ($(window).width() > 1400) {
-    distance = 700;
-  } else {
-    distance = 550;
-  }
-  $('.down_arrow').fadeIn('slow').animate({
-    top: distance
-  }).fadeOut('slow');
+    // Quick flash down arrow on potfolio page
+    if ($(window).width() > 1400) {
+      distance = 700;
+    } else {
+      distance = 550;
+    }
+    $('.down_arrow').fadeIn('slow').animate({
+      top: distance
+    }).fadeOut('slow');
 
-  $('.work').hover(function() {
-    $('.work i').fadeIn();
-  })
+    $('.work').hover(function() {
+      $('.work i').fadeIn();
+    })
 
 })
