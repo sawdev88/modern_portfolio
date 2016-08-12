@@ -1,76 +1,86 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sean Wines - Front-end developer portfolio." />
-    <title>Sean Wines | Contact</title>
-    <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://use.fontawesome.com/09efc92c6d.js"></script>
-  </head>
-  <body id="contact">
-    <div class="container-fluid">
 
-      <div class="top_bar row">
-        <div class="thanks">
-          <h2>Sean Wines</h2>
-          <p>Thanks for checking out my site</p>
-        </div>
-        <div class="social">
-          <a href="https://twitter.com/seaner_sean" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-          <a href="https://github.com/sawdev88" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sean Wines - Front-end developer portfolio." />
+  <title>Sean Wines | Contact</title>
+  <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/09efc92c6d.js"></script>
+</head>
+
+<body id="contact">
+  <div class="container-fluid">
+
+    <header class="top-bar row">
+      <div class="thanks">
+        <h2>Sean Wines</h2>
+        <p>Thanks for checking out my site</p>
       </div>
-
-      <div class="show_nav">
-        <span class="glyphicon glyphicon-menu-hamburger"></span>
+      <div class="social">
+        <a href="https://twitter.com/seaner_sean" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="https://github.com/sawdev88" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
       </div>
-      <div class="hide_nav">
-        <span class="glyphicon glyphicon-remove"></span>
+    </header>
+
+    <div class="show-nav">
+      <span class="glyphicon glyphicon-menu-hamburger"></span>
+    </div>
+    <div class="hide-nav">
+      <span class="glyphicon glyphicon-remove"></span>
+    </div>
+
+    <section class="contact-info">
+      <h3>Email:</h3>
+      <h3>seanwinesdev@gmail.com</h3>
+      <div class="say-hello">
+        <h3>Send a hello:</h3>
+        <form class="say-hello" action="mail.php" method="post">
+          <input id="name" type="text" name="name" placeholder="Just a name" autofocus>
+          <br>
+          <input id="submit" type="submit" name="submit" value="Send">
+        </form>
       </div>
+    </section>
 
-      <nav class="nav_bottom">
-        <p>· 2016 ·</p>
-        <ul>
-          <li><a href="index.html">About</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a class="selected" href="#">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="port-page-left">
+      <a href="portfolio.html"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    </div>
+    <div class="port-display-left">
+      <h2>PORTFOLIO</h2>
+    </div>
 
-      <div class="port_page_left">
-        <a href="portfolio.html"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      </div>
-      <div class="port_display_left">
-        <h2>PORTFOLIO</h2>
-      </div>
+    <nav class="nav-bottom">
+      <p>· 2016 ·</p>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a class="selected" href="#">Contact</a></li>
+      </ul>
+    </nav>
 
-      <section class="contact_info">
-        <h3>Email:</h3>
-        <h3>seanwinesdev@gmail.com</h3>
-          <div class="say_hello">
-            <h3>Send a hello:</h3>
-            <form class="say_hello" action="mail.php" method="post">
-              <input id="name" type="text" name="name" value="" placeholder="Just a name" autofocus><br>
-              <input id="submit" type="submit" name="submit" value="Send">
-            </form>
-          </div>
-        </section>
+  </div>
+  <script src="js/script.js" charset="utf-8"></script>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-      </div>
-    <script src="js/script.js" charset="utf-8"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-81003885-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
 
-      ga('create', 'UA-81003885-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-  </body>
 </html>

@@ -1,6 +1,5 @@
 var $todoList = $('.todos');
 
-
 // Add item to list
 function addNewTodoItem() {
     var $todoText = $('.todoText'),

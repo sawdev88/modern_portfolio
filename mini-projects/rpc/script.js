@@ -5,11 +5,13 @@ var $winnerText = $('.winner-text'),
     winnerStr,
     areYouAWinner;
 
+//Computer makes game choice
 function compChoice(item) {
     compPickArr = ['Rock', 'Paper', 'Scissors']
     compPick = compPickArr[Math.floor(Math.random() * compPickArr.length)];
 }
 
+// Get winner between user and comp
 function winner(userPick, compPick) {
   var userPick,
       compPick;
@@ -32,6 +34,7 @@ function winner(userPick, compPick) {
     }
 }
 
+//get user pick and display comp pick
 function makePick() {
     $('.play').on('click', function() {
         userPick = $(this).val();
@@ -47,12 +50,12 @@ function makePick() {
             compChoice();
         }
     })
-}
+};
 
 $(function() {
 
-    makePick();
-
+  makePick();
+    // Show play again button when round is over and reset game for next round
     $('.play-again').on('click', function() {
       var $userScoreText = $('.user-score-text'),
           $compScoreText = $('.comp-score-text');

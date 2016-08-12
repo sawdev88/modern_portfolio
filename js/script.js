@@ -1,16 +1,16 @@
-let $about_button = $('.about_button'),
-    $remove_button = $('.remove'),
+let $aboutButton = $('.about-button'),
+    $removeButton = $('.remove'),
     $hero = $('.hero'),
     $about = $('.about'),
-    $about_p = $('.hero p'),
-    $index_body = $('#index'),
-    $hideNav = $('.hide_nav'),
-    $showNav = $('.show_nav'),
-    $topBar = $('.top_bar');
+    $aboutP = $('.hero p'),
+    $indexBody = $('#index'),
+    $hideNav = $('.hide-nav'),
+    $showNav = $('.show-nav'),
+    $topBar = $('.top-bar');
 
 function loopDivImgs() {
-    $('.display_responsive').fadeIn().delay(10000).fadeOut();
-    $('.display_toolbelt').delay(10500).fadeIn('slow').delay(10000).fadeOut('slow', loopDivImgs);
+    $('.display-responsive').fadeIn().delay(10000).fadeOut();
+    $('.display-toolbelt').delay(10500).fadeIn('slow').delay(10000).fadeOut('slow', loopDivImgs);
 };
 
 $(function() {
@@ -19,10 +19,10 @@ $(function() {
     loopDivImgs();
 
     // Show about div. Hide about button on hero section
-    $about_button.on('click', function() {
+    $aboutButton.on('click', function() {
         $(this).hide();
-        $about_p.css('margin-bottom', '0');
-        $index_body.css('overflow', 'scroll');
+        $aboutP.css('margin-bottom', '0');
+        $indexBody.css('overflow', 'scroll');
 
         if ($(window).width() <= 520) {
             $hero.hide();
@@ -47,9 +47,9 @@ $(function() {
     });
 
     // Hide about div. Show hero button
-    $remove_button.on('click', function() {
-        $about_button.fadeIn();
-        $about_p.css('margin-bottom', '10px');
+    $removeButton.on('click', function() {
+        $aboutButton.fadeIn();
+        $aboutP.css('margin-bottom', '10px');
 
         //Hide the hero modal
         $about.animate({
@@ -92,25 +92,25 @@ $(function() {
         });
     })
 
-    // PAGE NAV ARROWS
-    // RIGHT
-    $('.contact_page span, .port_page span').mouseover(function() {
+    // PAGE NAV ARROWS <-- * -->
+    // RIGHT -->
+    $('.contact-page span, .port-page span').mouseover(function() {
             $(this).fadeIn().css('color', '#fff');
-            $('.port_display, .contact_display').fadeIn();
+            $('.port-display, .contact-display').fadeIn();
         })
         .mouseout(function() {
             $(this).css('color', 'rgba(255, 255, 255, 0.75)');
-            $('.port_display, .contact_display').fadeOut();
+            $('.port-display, .contact-display').fadeOut();
         });
 
-    // LEFT
-    $('.about_page span, .port_page_left span').mouseover(function() {
+    // LEFT <--
+    $('.about-page span, .port-page-left span').mouseover(function() {
             $(this).fadeIn().css('color', 'rgba(255, 255, 255, 0.75)');
-            $('.about_display, .port_display_left').fadeIn();
+            $('.about-display, .port-display-left').fadeIn();
         })
         .mouseout(function() {
             $(this).css('color', 'rgba(255, 255, 255, 0.65)');
-            $('.about_display, .port_display_left').fadeOut();
+            $('.about-display, .port-display-left').fadeOut();
         });
 
     //Set animation destination for flash arrow
@@ -125,7 +125,7 @@ $(function() {
     }
 
     // Flash arrow on portfolio page
-    $('.down_arrow').fadeIn('slow').animate({
+    $('.down-arrow').fadeIn('slow').animate({
         top: distance()
     }).fadeOut('slow');
 
