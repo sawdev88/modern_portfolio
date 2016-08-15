@@ -654,8 +654,14 @@ aside img {
   .wrapper {
     width: 100%;
   }
+  .work {
+    height: 100%;
+  }
   .work p {
     font-size: 1.2em;
+  }
+  .side-bar {
+    display: none;
   }
   /*CONTACT PAGE*/
   .contact-info {
