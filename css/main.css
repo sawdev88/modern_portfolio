@@ -418,7 +418,7 @@ html {
   display: none;
 }
 
-aside {
+.toolbelt {
   float: right;
   width: 30%;
   height: 560px;
@@ -433,7 +433,7 @@ aside {
   overflow: hidden;
 }
 
-aside img {
+.toolbelt img {
   margin: auto;
 }
 
@@ -579,7 +579,7 @@ aside img {
 }
 
 @media (max-width: 990px) {
-  aside {
+  .toolbelt {
     float: none;
     clear: both;
     width: 100%;
@@ -660,7 +660,7 @@ aside img {
   .work p {
     font-size: 1.2em;
   }
-  .side-bar {
+  .toolbelt {
     display: none;
   }
   /*CONTACT PAGE*/
@@ -671,7 +671,7 @@ aside img {
 }
 
 @media (min-height: 800px) {
-  aside {
+  .toolbelt {
     height: 720px;
   }
 }
