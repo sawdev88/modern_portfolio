@@ -2,11 +2,15 @@ $(function() {
 
   // Loop img side section on portfolio page
   var loopDivImgs = function() {
-    $('.display-responsive').fadeIn().delay(10000).fadeOut();
-    $('.display-toolbelt').delay(10500).fadeIn('slow').delay(10000).fadeOut('slow', loopDivImgs);
-  };
 
-  loopDivImgs();
+    var loopImgs = function () {
+      $('.display-responsive').fadeIn().delay(10000).fadeOut();
+      $('.display-toolbelt').delay(10500).fadeIn('slow').delay(10000).fadeOut('slow', loopImgs);
+    };
+
+    return loopImgs();
+
+  }();
 
   // Show about div. Hide about button on hero section
   var toggleAboutSection = function () {
